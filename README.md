@@ -135,7 +135,6 @@ wordcloud>=1.8.0
 ```python
 nltk.download('stopwords')
 nltk.download('wordnet')
-nltk.download('punkt')  # Additional for tokenization
 ```
 
 ### Hardware Requirements
@@ -228,23 +227,7 @@ Model selection should be based on available computational resources and perform
 | BiSimpleRNN_GloVe | 64.97% |
 | SimpleRNN_GloVe | 64.25% |
 
-### Training Configuration and Computational Requirements
-
-**Data Splitting:**
-- Training: 251,999 samples (90% of original training data)
-- Validation: 28,000 samples (10% of original training data)
-- Test: 59,999 samples (held-out test set)
-
-**Training Parameters:**
-- Neural Networks: Batch size 128, max 50 epochs, early stopping (patience=5)
-- Traditional ML: Single training run per configuration
-- Hardware: CUDA-enabled GPU (when available)
-
-**Computational Time:**
-- Neural Networks: 30-95 seconds per model
-- Traditional ML: 0.14-113 seconds per model
-- Total experiment time: ~45 minutes
-
+s
 ### Model Performance Analysis
 
 **Per-Class Performance (Best Model - GRU_Word2Vec):**
